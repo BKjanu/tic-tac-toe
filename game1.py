@@ -27,14 +27,14 @@ def iswinner(bo, le):
 def playerMove():
     run = True 
     while run:
-        move = input('Please selcet a position to place an \'X\'  (1-9):  ')
+        move = input('Please select a number to place as \'X\'  (1-9):  ')
         try:
             move = int(move)
             if move > 0 and move < 10:
                 if spaceisFree(move):
                     run = False 
                     insertLetter('X', move)
-                else: 
+                else:  
                     print('sorry this space is occupied') 
             else:
                 print('Please type a number within the range!')
